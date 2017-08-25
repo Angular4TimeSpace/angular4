@@ -37,7 +37,7 @@
 		<!-- Name Column -->
 		<ng-container cdkColumnDef="operation">
 		<md-header-cell *cdkHeaderCellDef md-sort-header> Operation </md-header-cell>
-		<md-cell *cdkCellDef="let row"><a href='#' class="btn btn-danger triggerRemove">remove</a></md-cell>
+		<md-cell *cdkCellDef="let row"> <a href='#' class="btn btn-danger triggerRemove">remove</a></md-cell>
 		</ng-container>
   
 	  <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
