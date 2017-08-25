@@ -7,8 +7,8 @@
 			<li class="dropdown nav-item" dropdown><a href="javascript:;"
 				id="single-button" class="nav-link dropdown-toggle" dropdownToggle>
 					<i class="fa fa-user"></i> 
-					<span *ngIf="this.loginService.getUser()">					
-						Welcome  {{this.loginService.getUser()['name']}}
+					<span *ngIf="this.loginService.logggedInUserInformation()">					
+						Welcome  {{this.loginService.logggedInUserInformation()['name']}}
 					</span>
 					<b class="caret"></b>
 			</a>
@@ -20,8 +20,8 @@
 					<li><a class="dropdown-item" href="javascript:;"><i
 							class="fa fa-fw fa-gear"></i> Settings</a></li>
 					<li class="divider"></li>
-					<li><a class="dropdown-item" href="javascript:;"
-						[routerLink]="['/']"> <i class="fa fa-fw fa-power-off"></i>
+					<li><a class="dropdown-item" href="javascript:;" (click)="logoutEventHandler('logout')"
+						> <i class="fa fa-fw fa-power-off"></i>
 							Log Out
 					</a></li>
 				</ul></li>

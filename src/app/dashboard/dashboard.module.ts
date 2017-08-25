@@ -8,16 +8,19 @@ import { TableModule } from './tables/table.module';
 import { DashboardComponent } from './dashboard.component';
 import {TopNavComponent} from '../shared/index';
 import {SidebarComponent} from '../shared/index';
+import { UsersModule } from './users/users.module';
+
 
 
 @NgModule({
     imports: [
         CommonModule,
-      RouterModule,
-      Ng2BootstrapModule.forRoot(),
-      HomeModule,
+        RouterModule,
+        Ng2BootstrapModule.forRoot(),
+        HomeModule,
         ChartModule,
-        TableModule
+        TableModule,
+        UsersModule
     ],
     declarations: [DashboardComponent, TopNavComponent, SidebarComponent],
     exports: [DashboardComponent, TopNavComponent, SidebarComponent]

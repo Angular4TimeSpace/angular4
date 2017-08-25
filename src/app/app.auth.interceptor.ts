@@ -8,7 +8,6 @@ export class AuthInterceptor implements HttpInterceptor {
     constructor(private auth: LoginService) {}
  
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        console.log(req.url + " "+this.auth.getUser());
         return next.handle(req);
     }
 }

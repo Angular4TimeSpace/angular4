@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
+import { LoginService } from '../../login/login.service';
 
 @Component({
   selector: 'app-sidebar-cmp',
-  templateUrl: 'sidebar.html'
+  templateUrl: 'sidebar.html',
+  providers: [LoginService]
+
 })
 
 export class SidebarComponent {
   isActive = false;
   showMenu = '';
+
+  constructor(private loginService:LoginService) {
+
+  }
   eventCalled() {
     this.isActive = !this.isActive;
   }
