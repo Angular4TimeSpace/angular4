@@ -39,6 +39,10 @@ export class UsersComponent {
         this.dataSource.filter = this.filter.nativeElement.value;
       });
   }
+
+  handleCellClick(cell): void {
+    console.log(cell);
+  }
 }
 
 /** An example database that the data source uses to retrieve data for the table. */

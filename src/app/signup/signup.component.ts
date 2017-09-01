@@ -16,7 +16,15 @@ export class SignupComponent {
    } 
   
    onSubmit(model) {
-    this.signupService.registerUser(model);
+    this.signupService.registerUser(model)  
+    .subscribe(
+      (response) => {
+            console.log(response);
+      },
+      (error) => {
+        console.log('Error happened' + error);
+      }
+    );
    }
   
    roles: any[] = [
